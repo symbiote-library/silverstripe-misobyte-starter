@@ -1,0 +1,275 @@
+html > body {
+    padding: 0;
+
+    &.toolbar-anchored {
+        padding-left: 250px;
+    }
+}
+
+.livingdocs-editor {
+
+    [data-doc-container="card"],
+    [data-doc-container="cardblock"],
+    [data-doc-container="cardfooter"],
+    [data-doc-container="carddeck"],
+    [data-doc-container="list"],
+    [data-doc-container="modaldialog"],
+    [data-doc-container="modalbody"] {
+        border: 2px dotted #e3e3e3 !important;
+    }
+
+    [data-doc-container="container"],
+    [data-doc-container="modalwrap"] {
+        border: 4px dotted #ccc !important;
+    }
+
+    .modal {
+        display: block !important;
+        position: static;
+        opacity: 1;
+        
+        .modal-dialog {
+            transform: none;
+
+            &.modal-full {
+                height: auto;
+                min-height: 0;
+            }
+        }
+
+    }
+}
+
+.typography .livingdocs-toolbar {
+
+    box-shadow: 0 0 3px rgba(0,0,0,0.25);
+    cursor: move;
+    padding: 0;
+
+    textarea,
+    input[type="text"],
+    select[multiple] {
+        @extend .form-control;
+    }
+
+    select:not([multiple]) {
+        @extend .custom-select;
+        height: auto;
+        width: 100%;
+    }
+    select[multiple] {
+        height: auto;
+        @extend .form-control-sm;
+    }
+
+    input[type="submit"],
+    input[type="button"],
+    button,
+    .Actions button.action {
+        @extend .btn;
+        @extend .btn-sm;
+        @extend .btn-secondary;
+    }
+
+    .livingdocs-actions .action {
+        width: calc(20px + 1rem);
+        overflow: hidden;
+        
+        &:before {
+            margin-right: 1em;
+            font-family: Linear;
+            display: inline-block;
+            @extend .icon-1x;
+        }
+
+        &[name="action_save"] {
+            @extend .btn-success;
+            &:before {
+                @extend .lnr-floppy-disk;
+            }
+        }
+
+        &[name="action_publish"] {
+            @extend .btn-success;
+            &:before {
+                @extend .lnr-check;
+            }
+        }
+
+        &[name="action_preview"] {
+            &:before {
+                @extend .lnr-window;
+            }
+        }
+
+        &[name="action_live"] {
+            &:before {
+                @extend .lnr-exit;
+            }
+        }
+    }
+
+    .livingdocs-actions,
+    .livingdocs-item-properties > div {
+        padding: 10px;
+        position: relative;
+        margin: 0;
+    }
+
+    button.alert-danger {
+        @extend .btn-danger;
+    }
+
+    .livingdocs_EditorField_Toolbar_options > h4 {
+        font-size: 1rem;
+
+        &:first-child {
+            margin-right: 2em;
+            font-weight: bold;
+        }
+    }
+
+    .livingdocs_EditorField_Toolbar_options > h5 {
+        font-size: 1rem;
+    }
+
+    .structure-options {
+        padding: 10px;
+        @extend .form-group;
+
+        select {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        button {
+            @extend .btn-secondary;
+        }
+
+        + ul {
+            padding: 10px;
+        }
+    }
+
+    .group-component-holder .toolbar-entry {
+        margin: 5px 5px 0 0;
+        font-size: $font-size-xs;
+    }
+
+    .livingdocs-components {
+
+        ul {
+
+            li {
+                padding: 10px 0;
+
+                input[type="checkbox"] {
+                    top: 0;
+                }
+                h2 {
+                    font-size: $font-size-sm;
+                    color: #333;
+                    font-weight: 500;
+                    letter-spacing: 0;
+                }
+                i {
+                    margin-top: .75em;
+
+                    &:before,
+                    &:after {
+                        background: #333;
+                        width: 2px;
+                        height: 8px;
+                    }
+                    &:after {
+                        transform: translate(3px, 0) rotate(-45deg)
+                    }
+                }
+                
+                input[type=checkbox]:checked ~ i:before {
+                    transform: translate(3px, 0) rotate(45deg);
+                }
+            }
+        }
+
+        div.group-component-holder {
+            font-size: $font-size-sm;
+            letter-spacing: 0;
+        }
+    }
+
+    .livingdocs_EditorField_Toolbar_options {
+        
+        label {
+            display: block;
+        }
+
+        > a {
+            box-shadow: none;
+
+            &:hover,
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .properties-closer {
+        @extend .btn;
+        @extend .btn-link;
+        width: calc(20px + 1rem);
+        overflow: hidden;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        right: 10px;
+
+        .icon {
+            font-family: Linear;
+            @extend .lnr-cross;
+            @extend .icon-1x;
+            display: inline-block;
+            margin-right: 1em;
+        }
+    }
+
+}
+
+div#FrontendEditingControls {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+
+    > input[type="button"] {
+        @extend .btn;
+        @extend .btn-sm;
+        @extend .btn-secondary;
+    }
+
+    select {
+        @extend .custom-select-sm;
+    }
+}
+
+#lf-dialog {
+    input {
+        @extend .form-control;
+    }
+
+    label {
+        margin: 10px 0 0 0;
+    }
+
+    .lf-popup > label:first-child {
+        margin-top: 0;
+    }
+
+    button {
+        @extend .btn;
+        @extend .btn-secondary;
+    }
+}
+
+.doc-dragged-placeholder {
+    z-index: 3000;
+}

@@ -1,0 +1,24 @@
+{
+    "name": "symbiote-library/silverstripe-misobyte-starter",
+    "description": "A minimal theme used for Symbiote projects.",
+    "type": "silverstripe-theme",
+    "keywords": ["silverstripe", "theme"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Grant Heggie",
+            "homepage": "http://www.symbiote.com.au"
+        }
+    ],
+    "require": {
+        "composer/installers": "*",
+        "silverstripe/framework": "~3.2",
+		"symbiote-library/silverstripe-misobyte-theme": "~1.0"
+    },
+	"extra": {
+		"installer-name": "misobyte-starter",
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

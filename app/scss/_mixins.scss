@@ -1,0 +1,141 @@
+// Mixins
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+@mixin logo-bg-svg($fill: #ffffff) {
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="124px" height="124px" viewBox="0 0 124 124" enable-background="new 0 0 124 124" xml:space="preserve"><path fill="#{$fill}" d="M36.104,72.25l0.871-0.87h10.465l0.875,0.87c0,6.098,3.486,9.579,13.952,9.579
+	c7.851,0,12.21-2.61,12.21-7.837c0-6.094-3.49-7.835-15.701-9.576c-12.206-1.74-21.801-6.092-21.801-18.283
+	c0-7.012,4.538-13.449,14.96-15.692L27.654,2.96L22.177,0.5H3.082L0.25,3.048v24.836l32.891,31.921v2.465L0.25,96.745v24.623
+	l2.74,2.467h16.441l5.486-2.467l27.21-30.088C41.157,88.696,36.104,81.316,36.104,72.25"/><path fill="#{$fill}" d="M90.697,62.27v-2.461l32.887-32.011V3.173L120.613,0.5h-16l-5.478,2.46L71.361,31.042
+	c8.826,2.722,12.708,9.049,12.708,16.835l-0.874,0.871H72.732l-0.873-0.871c0-4.757-2.19-7.345-9.826-7.77h-1.489l-0.05-0.052
+	c-0.282-0.005-0.549-0.018-0.846-0.018c-7.847,0-10.461,2.612-10.461,6.093c0,5.228,3.485,6.968,15.696,8.709
+	c12.206,1.74,21.801,6.962,21.801,19.153c0,7.529-4.348,14.508-15.105,17.15l27.332,30.227l5.485,2.463h16.443l2.744-2.463V96.746
+	L90.697,62.27"/></svg>');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@mixin sym-arrow-right($fill: #ffffff){
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.294px" height="21.748px" viewBox="0 0 12.294 21.748" enable-background="new 0 0 12.294 21.748" xml:space="preserve">
+<polygon fill="#{$fill}" points="0.435,0 0,0.435 0,4.838 5.766,10.463 5.76,10.904 0,16.941 0,21.313 0.435,21.748 3.35,21.748 4.317,21.281 12.294,12.481 12.294,9.134 4.817,0.445 3.833,0 "/></svg>');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+// Background Cover Mixin
+
+@mixin background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+@mixin bg-gradient($top, $bottom) {
+    background: -moz-linear-gradient(270deg, $top 0%, $bottom 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom)); /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, $top 0%, $bottom 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(270deg, $top 0%, $bottom 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(270deg, $top 0%, $bottom 100%); /* ie10+ */
+    background: linear-gradient(180deg, $top 0%, $bottom 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=0 ); /* ie6-9 */
+}
+
+@mixin diagonal-gradient(){
+  background: rgb(255,221,0); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(255,221,0,1) 0%, rgba(245,130,32,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(255,221,0,1) 0%,rgba(245,130,32,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(255,221,0,1) 0%,rgba(245,130,32,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdd00', endColorstr='#f58220',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+@mixin circle-background($diameter, $border, $colour, $font) {
+    width: $diameter;
+    height: $diameter;
+    display: inline-block;
+    text-align: center;
+    /*padding: $diameter/4 $diameter/4;*/
+    font-size: $font;
+    line-height: 1.33;
+    border-radius: $diameter/2;
+    /*border: 2px solid $border;*/
+    background-color: $colour;
+}
+
+// Font Mixins
+
+@mixin brand-font {
+    @include body-font();
+}
+
+@mixin serif-font {
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin script-font {
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+@mixin body-font {
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+
+@mixin heading-font {
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

@@ -1,0 +1,23 @@
+/* Styles for Boostrap3 backwards compatibility (to a degree) */
+
+.well {
+    @extend .card;
+    @include card-variant(#f7f7f7, #f7f7f7);
+}
+
+.padded-top {
+    @extend .pt-4;
+}
+.padded-bottom {
+    @extend .pb-4;
+}
+.padded-left {
+    @extend .pl-4;
+}
+.padded-right {
+    @extend .pr-4;
+}
+
+button.alert-danger {
+    @extend .btn-danger;
+}
