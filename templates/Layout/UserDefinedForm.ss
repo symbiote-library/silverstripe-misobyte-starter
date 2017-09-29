@@ -19,8 +19,12 @@
                 <br />Monday - Friday, 9am - 5:30pm
             </p>
             <p>
-                <strong>Reception</strong>
-                <br />+61 3 8352 4431
+                <strong>Support and Sales</strong>
+                <br />+61 1300 550 481 
+            </p>
+            <p>
+                <strong>Office</strong>
+                <br />+61 3 7002 5550
             </p>
             <p>
                 <strong>Physical location</strong>
@@ -45,8 +49,12 @@
                 <br />Monday - Friday, 9am - 5:30pm
             </p>
             <p>
-                <strong>Reception</strong>
-                <br />+61 3 8352 4431
+                <strong>Support and Sales</strong>
+                <br />+61 1300 550 481 
+            </p>
+            <p>
+                <strong>Office</strong>
+                <br />+61 3 7002 5550
             </p>
             <p>
                 <strong>Physical location</strong>

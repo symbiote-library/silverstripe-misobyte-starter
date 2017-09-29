@@ -24,7 +24,8 @@
                     <li><a href="#">Terms of Use</a></li>-->
                 </ul>
                 <p>123/838 Collins Street, Docklands</p>
-                <p>+61 3 8352 4431</p>
+                <p>Support: +61 1300 550 481</p>
+                <p>Office:  +61 3 7002 5550</p>
         </div>
     </div>
 </footer>
