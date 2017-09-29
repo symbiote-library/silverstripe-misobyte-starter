@@ -101,6 +101,12 @@ html > body {
                 @extend .lnr-window;
             }
         }
+        
+        &[name="action_workflow"] {
+            &:before {
+                @extend .lnr-thumbs-up;
+            }
+        }
 
         &[name="action_live"] {
             &:before {
