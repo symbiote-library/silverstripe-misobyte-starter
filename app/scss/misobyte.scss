@@ -883,6 +883,14 @@ footer {
     }
 }
 
+form .Actions div.CompositeField {
+    display: inline;
+}
+
+form .Actions div.field {
+    margin: 0px 5px;
+}
+
 @media(min-width:768px) {
 
     // Space between top menu items and social links
