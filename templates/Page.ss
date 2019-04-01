@@ -99,6 +99,9 @@
     </div>
 
     <% include Footer %>
+    <% if $CurrentMember %>
+        $BetterNavigator
+    <% end_if %>
     
 </body>
 

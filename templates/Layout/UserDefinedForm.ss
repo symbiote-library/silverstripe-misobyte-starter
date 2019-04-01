@@ -28,16 +28,16 @@
             </p>
             <p>
                 <strong>Physical location</strong>
-                <br />123/838 Collins St,
-                <br />Docklands
+                <br />1/362 Clarendon St,
+                <br />South Melbourne
                 <br />Melbourne
                 <br />Australia
             </p>
             <p>
                 <strong>Postal address</strong>
-                <br />123/838 Collins St,
-                <br />Docklands
-                <br />Melbourne, VIC 3008
+                <br />1/362 Clarendon St,
+                <br />South Melbourne
+                <br />Melbourne, VIC 3205
                 <br />Australia
             </p>
             <p><a title="Time in Melbourne" href="https://www.timeanddate.com/worldclock/australia/melbourne" target="_blank">Current time in Melbourne</a></p>

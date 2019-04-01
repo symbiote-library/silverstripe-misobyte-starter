@@ -1,6 +1,6 @@
 
 
-<% if canEdit && $EditMode %>
+<% if  $EditMode %>
     <div class="livingdocs-toolbar anchor">
 <!--            <iframe src="about:blank">
 

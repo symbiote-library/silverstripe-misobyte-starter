@@ -23,9 +23,10 @@
 <!--                    <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms of Use</a></li>-->
                 </ul>
-                <p>123/838 Collins Street, Docklands</p>
+                <p>1/362 Clarendon St South Melbourne</p>
                 <p>Support: +61 1300 550 481</p>
                 <p>Office:  +61 3 7002 5550</p>
+            </div>
         </div>
     </div>
 </footer>
